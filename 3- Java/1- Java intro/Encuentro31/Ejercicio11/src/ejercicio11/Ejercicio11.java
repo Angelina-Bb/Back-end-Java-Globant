@@ -58,6 +58,7 @@ public class Ejercicio11 {
                         }else if (eleccion.equals("N")){
                             salida = true;
                         }
+                        break;
                 }
             } while (salida == true);
         }else{
