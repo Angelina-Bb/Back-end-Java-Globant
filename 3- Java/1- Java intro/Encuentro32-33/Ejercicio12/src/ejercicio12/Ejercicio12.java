@@ -16,7 +16,7 @@ public class Ejercicio12 {
             cadena = leer.nextLine();
             int longCadena;
             longCadena = cadena.length();
-            if (("O".equalsIgnoreCase(cadena.substring(longCadena-1, longCadena))) && ("X".equalsIgnoreCase(cadena.substring(0, 1))) && (longCadena == 5)) {
+            if (("O".equalsIgnoreCase(cadena.substring(longCadena-1, longCadena))) && ("X".equalsIgnoreCase(cadena.substring(0, 1))) && (longCadena <= 5)) {
                 correcto = correcto + 1;
             }else{
                 incorrecto = incorrecto + 1;
