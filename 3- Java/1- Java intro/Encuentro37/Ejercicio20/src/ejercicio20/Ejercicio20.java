@@ -7,13 +7,19 @@ public class Ejercicio20 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         //Determina el tamano de la matriz
-        System.out.println("Ingrese el el tamano de la matriz:");
-        int n;
-        n = leer.nextInt();
-        int[][] matriz;
-        matriz = new int[n][n];
+        //System.out.println("Ingrese el el tamano de la matriz:");
+        //int n;
+        int n = 3;
+        //n = leer.nextInt();
+        //int[][] matriz;
+        int[][] matriz = { 
+            { 2, 7, 6 }, 
+            { 9, 5, 1 }, 
+            { 4, 3, 8 } 
+        };
+        //matriz = new int[n][n];
         //Ingresa por teclado llenando la matriz 
-        llenarMatriz(matriz, n);
+        //llenarMatriz(matriz, n);
         //Mostrar la matriz por pantalla
         mostrarMatriz(matriz, n);
         //Evaluar filas, columnas y diagonales
@@ -87,6 +93,9 @@ public class Ejercicio20 {
             aux = 0;
         }
         //Leer el vector
+        /* No es necesario leer el vector. Podes aprovechar la logica de arriba, y en vez 
+         * de andar asignando true/false al vector, seteas la variable igualdad en false y cortas
+         * todo, ya que con que haya una sola suma que no coincide, ya el cubo no es magico */
         for (int k = 0; k < n; k++) {
             if (vector[k] == false) {
                 igualdad = false;
@@ -114,6 +123,7 @@ public class Ejercicio20 {
             aux = 0;
         }
         //Leer el vector
+        // Lo mismo que te comentaba antes.
         for (int k = 0; k < n; k++) {
             if (vector[k] == false) {
                 igualdad = false;
@@ -127,7 +137,7 @@ public class Ejercicio20 {
 
     public static boolean diagonalPrincipal(int[][] matriz, int n) {
         boolean igualdad = false;
-        boolean[] vector = new boolean[n];
+        //boolean[] vector = new boolean[n];
         int aux = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -135,27 +145,31 @@ public class Ejercicio20 {
                     aux = aux + matriz[i][j];
                 }
             }
-            if (aux == sumaValores(matriz, n)) {
-                vector[i] = true;
-            } else {
-                vector[i] = false;
-            }
-            aux = 0;
         }
-        //Leer el vector
-        for (int k = 0; k < n; k++) {
+
+        // Este auxiliar seria la suma de todos los valores de la diagonal.
+        /* Toda esta logica ya tiene que ir por afuera del bucle, sino estas comparando cada valor
+         * de cada celda de la diagonal contra el valor de toda la linea
+         */
+        if (aux == sumaValores(matriz, n)) {
+            igualdad = true;
+        }
+
+        //Leer el vector (no hace falta esto)
+        /* for (int k = 0; k < n; k++) {
             if (vector[k] == false) {
                 igualdad = false;
                 break;
             } else {
                 igualdad = true;
             }
-        }
+        } */
         return igualdad;
     }
+    
     public static boolean diagonalSecundaria(int[][] matriz, int n) {
         boolean igualdad = false;
-        boolean[] vector = new boolean[n];
+        //boolean[] vector = new boolean[n];
         int aux = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -163,22 +177,24 @@ public class Ejercicio20 {
                     aux = aux + matriz[i][j];
                 }
             }
+            
+            /* Toda esta logica ya tiene que ir por afuera del bucle, sino estas comparando cada valor
+             * de cada celda de la diagonal contra el valor de toda la linea
+             */
             if (aux == sumaValores(matriz, n)) {
-                vector[i] = true;
-            } else {
-                vector[i] = false;
-            }
-            aux = 0;
-        }
-        //Leer el vector
-        for (int k = 0; k < n; k++) {
-            if (vector[k] == false) {
-                igualdad = false;
-                break;
-            } else {
                 igualdad = true;
             }
         }
+        //Leer el vector
+        // Not necessary!
+        // for (int k = 0; k < n; k++) {
+        //     if (vector[k] == false) {
+        //         igualdad = false;
+        //         break;
+        //     } else {
+        //         igualdad = true;
+        //     }
+        // }
         return igualdad;
     }
 }
