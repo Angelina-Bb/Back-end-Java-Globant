@@ -93,7 +93,6 @@ public class Ejercicio20 {
                 break;
             } else {
                 igualdad = true;
-                break;
             }
         }
         return igualdad;
@@ -121,7 +120,6 @@ public class Ejercicio20 {
                 break;
             } else {
                 igualdad = true;
-                break;
             }
         }
         return igualdad;
@@ -151,7 +149,6 @@ public class Ejercicio20 {
                 break;
             } else {
                 igualdad = true;
-                break;
             }
         }
         return igualdad;
@@ -180,7 +177,6 @@ public class Ejercicio20 {
                 break;
             } else {
                 igualdad = true;
-                break;
             }
         }
         return igualdad;
