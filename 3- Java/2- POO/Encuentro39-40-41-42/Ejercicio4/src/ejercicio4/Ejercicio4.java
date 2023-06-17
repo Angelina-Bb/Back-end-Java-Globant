@@ -14,8 +14,6 @@ public class Ejercicio4 {
         System.out.println("Superficie: " + rs.perimetro(formas.getBase(), formas.getAltura()));
         System.out.println("-----------------------------");
         rs.dibujo(formas.getBase(), formas.getAltura());
-        
-        
     }
 
 }
