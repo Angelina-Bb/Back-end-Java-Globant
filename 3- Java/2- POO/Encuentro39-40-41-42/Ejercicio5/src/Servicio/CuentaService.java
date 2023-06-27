@@ -14,8 +14,7 @@ public class CuentaService {
         nuevaCuenta.setDni(leer.nextLong());
         System.out.println("Ingrese su numero de cuenta");
         nuevaCuenta.setNumeroCuenta(leer.nextInt());
-        System.out.println("Ingrese su saldo actual");
-        nuevaCuenta.setSaldoActual(leer.nextInt());
+        
                 
         return nuevaCuenta;
     }

@@ -5,7 +5,7 @@ public class Cuenta {
     
     private int numeroCuenta;
     private long dni;
-    private int saldoActual;
+    private int saldoActual = 100000;
 
     public Cuenta() {
     }
