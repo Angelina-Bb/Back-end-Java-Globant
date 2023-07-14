@@ -54,7 +54,7 @@ public class AhorcadoService {
         String[] auxiliar;
         auxiliar = nuevoJuego.getPalabra();
         int i = 0;
-        int encontradas = 0;
+        int encontradas = nuevoJuego.getLetraEncontrada();
         int faltantes = 0;
         boolean esta = false;
         while (i < nuevoJuego.getLargo()) {
